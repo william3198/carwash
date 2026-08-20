@@ -8,7 +8,7 @@ DEBUG = os.getenv("DEBUG", "False") == "True"
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    ".onrender.com",
+    "carwash-l5v0.onrender.com",
 ]
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -17,7 +17,6 @@ SECRET_KEY = 'django-insecure-e-^qk(byox3v6-%mpd!(0vrc8f#l50ah$42o_=x1yxn&be4^%l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 # Application definition

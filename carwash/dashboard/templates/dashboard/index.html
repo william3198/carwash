@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Dashboard | Car Wash
+{% endblock %}
+
+
+{% block content %}
+
+<section class="dashboard-section">
+
+    <div class="container-fluid">
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <span class="text-muted">
+                    Panel de control
+                </span>
+
+                <h1>
+                    Bienvenido, {{ request.user.username }}
+                </h1>
+
+            </div>
+
+            <a
+                href="{% url 'usuarios:logout' %}"
+                class="btn btn-outline-danger">
+
+                <i class="fa-solid fa-right-from-bracket me-2"></i>
+
+                Cerrar sesión
+
+            </a>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+
+                        <i class="fa-solid fa-car"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Vehículos hoy
+                        </span>
+
+                        <h2>
+                            {{ vehiculos_hoy }}
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+
+                        <i class="fa-solid fa-soap"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            En proceso
+                        </span>
+
+                        <h2>
+                            {{ en_proceso }}
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Terminados
+                        </span>
+
+                        <h2>
+                            {{ terminados }}
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Ingresos hoy
+                        </span>
+
+                        <h2>
+                            S/ {{ ingresos_hoy }}
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4 mt-2">
+
+            <div class="col-lg-8">
+
+                <div class="dashboard-panel">
+
+                    <h4>
+                        Vehículos en atención
+                    </h4>
+
+                    <div class="text-center py-5 text-muted">
+
+                        <i class="fa-solid fa-car-side fa-3x mb-3"></i>
+
+                        <p>
+                            Todavía no hay órdenes registradas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <div class="dashboard-panel">
+
+                    <h4>
+                        Acciones rápidas
+                    </h4>
+
+                    <div class="d-grid gap-3 mt-4">
+
+                        <button class="btn btn-danger">
+
+                            <i class="fa-solid fa-plus me-2"></i>
+
+                            Nueva orden
+
+                        </button>
+
+                        <button class="btn btn-outline-danger">
+
+                            <i class="fa-solid fa-user-plus me-2"></i>
+
+                            Nuevo cliente
+
+                        </button>
+
+                        <button class="btn btn-outline-danger">
+
+                            <i class="fa-solid fa-car me-2"></i>
+
+                            Registrar vehículo
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

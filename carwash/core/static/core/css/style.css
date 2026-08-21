@@ -266,7 +266,7 @@ footer a:hover {
 
 
 .hero-benefits i {
-    color: #0d6efd;
+    color: #e50303;
 }
 
 
@@ -530,7 +530,7 @@ footer a:hover {
 
     gap: 7px;
 
-    color: #0d6efd;
+    color: #eb0202;
 
     font-size: 0.95rem;
     font-weight: 700;
@@ -554,7 +554,7 @@ footer a:hover {
 ========================================= */
 
 .service-card-featured {
-    border: 2px solid #0d6efd;
+    border: 2px solid #e60202;
 }
 
 
@@ -566,7 +566,7 @@ footer a:hover {
 
     padding: 5px 10px;
 
-    background-color: #0d6efd;
+    background-color: #f00101;
     color: #ffffff;
 
     border-radius: 50px;
